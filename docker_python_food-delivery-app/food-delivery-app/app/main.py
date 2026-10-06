@@ -78,3 +78,7 @@ async def read_root(request: Request):
 @app.get("/api/health")
 async def health_check():
     return {"status": "healthy", "service": "food-delivery-frontend"}
+import uvicorn
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
